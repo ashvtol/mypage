@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<tile>
+</title>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/animate.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/sm.js"></script>
+  <script type="text/javascript" src="js/function.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("#top").fadeIn(300);
+    $("#c1").fadeIn(500);
+    $("#c2").fadeIn(500);
+    $("#c3").fadeIn(500);
+    $("#grass").fadeIn(500);
+    })
+
+</script>
+<script>
+function animationHover(element, animation){
+    element = $(element);
+    element.hover(
+        function() {
+            element.addClass('animated ' + animation);
+        },
+        function(){
+            //wait for animation to finish before removing classes
+            window.setTimeout( function(){
+                element.removeClass('animated ' + animation);
+            }, 0);
+        });
+}
+
+$(document).ready(function(){
+    $('#top').each(function() {
+        animationHover(this, 'tada');
+    });
+    $('#c1').each(function() {
+        animationHover(this, 'pulse');
+    });
+    $('#c2').each(function() {
+        animationHover(this, 'pulse');
+    });
+    $('#c3').each(function() {
+        animationHover(this, 'pulse');
+    });
+
+
+});
+
+
+</script>
+
+</head>
+<body class="noselect">
+
+<div id="main" class="m-aside scene_element scene_element--fadein">
+
+<div class="header">
+<center>
+  <div class="animated flipInX">
+  <a href="#">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="abt.html">About Me</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="pro.html">My Projects</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="contact.html">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+</center>
+</div>
+
+<div class="animated bounceInDown" class="scene_element scene_element--fadein">
+<center>
+<div id="top" class="animated" style="display:none">
+  <center><h1>Somethings you should know about me</h1></center>
+</div>
+<center>
+</div>
+
+<p>
+
+<div class="animated fadeInLeft">
+<div class="city" id="c1" style="display:none" >
+  <h2>Strength</h2>
+  <p>I devote my entire energy to work.</p>
+  <p>"All work no play makes jack dull". With this said when I work hard I play harder.</p>
+</div>
+</div>
+
+<div class="animated bounceInUp">
+<div class="city" id="c2" style="display:none">
+  <h2>Passion</h2>
+  <p>"Love what you do and do what you love"</p>
+  <p>When I take up a job it only means I am in love with it.</p>
+</div>
+</div>
+
+<div class="animated fadeInRight">
+<div class="city" id="c3" style="display:none">
+  <h2>Curiousity</h2>
+  <p>"Curiousity killed the cat"</p>
+  <p>Hardly matters since I am much more evolved than a cat.</p>
+</div>
+</div>
+
+<div id="grass" class="animated bounceInUp" style="display:none">
+  <img src="asset/img/grass.png" width="100%">
+</div>
+
+
+</div>
+
+
+
+</body>
+</html>
